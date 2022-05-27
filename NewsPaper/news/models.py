@@ -45,7 +45,7 @@ class Post(models.Model):
     article = models.CharField(max_length=2, choices=POSTLIST, default='ar')
     data = models.DateTimeField(auto_now_add=True)
     head = models.CharField(max_length=255)
-    body = models.TextField
+    body = models.TextField()
     raiting = models.IntegerField(default=0)
 
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
@@ -69,7 +69,7 @@ class PostCategory(models.Model):
 
 
 class Comment(models.Model):
-    text = models.TextField
+    text = models.TextField()
     data = models.DateTimeField(auto_now_add=True)
     raiting = models.IntegerField(default=0)
 
